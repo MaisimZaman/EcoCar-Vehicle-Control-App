@@ -1,0 +1,66 @@
+{
+  "expo": {
+    "name": "UWAFT-app",
+    "slug": "UWAFT-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.maisimdevelops.UWAFTapp",
+      "infoPlist": {
+        "NSBluetoothAlwaysUsageDescription": "Bluetooth is is used in this device to connect to the Cadilac Lyriq",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "UWAFT-App would like to know your location to track the Lyriq from you"
+      },
+      "config":{
+        "googleMapsApiKey": "AIzaSyDSBmzVj9v9P2BcATKJ8cU9jkvYvX5fAsc"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+
+      "package": "com.maisimdevelops.UWAFTapp"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "f8354a6e-b1c4-4934-8b03-8fe9ffc0aacd"
+      }
+    },
+    "plugins": [
+      [
+        "@config-plugins/react-native-ble-plx",
+        {
+          "isBackgroundEnabled": true,
+          "modes": [
+            "peripheral",
+            "central"
+          ],
+          "bluetoothAlwaysPermission": "Allow UW-EcoCar to acess bluetooth"
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow UWAFT-App to use your location."
+        }
+      ]
+    ]
+  }
+}

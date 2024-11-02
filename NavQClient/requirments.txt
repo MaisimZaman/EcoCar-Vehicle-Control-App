@@ -1,0 +1,4 @@
+firebase_admin
+bleak
+bless
+dbus-next
